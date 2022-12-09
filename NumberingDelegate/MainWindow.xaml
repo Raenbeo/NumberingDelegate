@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="NumberingDelegate" Height="433" Width="388" WindowStartupLocation="CenterScreen" SizeToContent="WidthAndHeight">
     <Grid>
-        <DataGrid  Margin="0,0,0,149" x:Name="NumberDGrid" MaxHeight="268.04">
+        <DataGrid x:Name="NumberDGrid" MaxHeight="268.04" Height="268" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="이름" Binding="{Binding Path = FileName}" IsReadOnly="True" Width="380"/>
             </DataGrid.Columns>
@@ -17,13 +17,16 @@
         <Label Content="공통으로 쓸 이름" HorizontalAlignment="Left" Height="26" Margin="10,310,0,0" VerticalAlignment="Top" Width="108"/>
         <Label Content="현재 공통 경로" HorizontalAlignment="Left" Height="25" Margin="10,273,0,0" VerticalAlignment="Top" Width="89"/>
         <Button Content="Button" Height="0" Margin="244,286,144,132" Width="0"/>
-        <Button Content="확인" Margin="293,375,10,10" Name="OkBtn" Click="OkBtn_Click"/>
+        <Button Content="확인" Margin="0,0,10,10" Name="OkBtn" Click="OkBtn_Click" Height="32" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="50"/>
         <TextBox HorizontalAlignment="Left" Height="25" Margin="116,274,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" Name="NowCommonPathTxt"/>
-        <TextBox Height="26" Margin="116,341,10,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True" Name="AllCountTxt" Text="0"/>
+        <TextBox Height="26" Margin="116,341,0,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True" Name="AllCountTxt" Text="0" HorizontalAlignment="Left" Width="110"/>
         <Label Content="전체 아이템 갯수" HorizontalAlignment="Left" Height="26" Margin="10,341,0,0" VerticalAlignment="Top" Width="108"/>
-        <TextBox Height="26" Margin="130,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="CoummonExtensionTxt" HorizontalAlignment="Left" Width="158"/>
-        <Label Content="공통으로 쓸 확장자" HorizontalAlignment="Left" Height="26" Margin="10,378,0,0" VerticalAlignment="Top" Width="115"/>
-        <Button Content="열기" HorizontalAlignment="Left" Height="24" Margin="340,274,0,0" VerticalAlignment="Top" Width="38" x:Name="OpenFolderBtn" Click="OpenFolderBtn_Click"/>
+        <TextBox Height="26" Margin="130,378,0,0" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="CoummonExtensionTxt" HorizontalAlignment="Left" Width="96"/>
+        <Label Content="공통으로 쓸 확장자" Height="26" Margin="10,0,263,13" VerticalAlignment="Bottom"/>
+        <Button Content="열기" HorizontalAlignment="Right" Height="24" Margin="0,274,10,0" VerticalAlignment="Top" Width="38" x:Name="OpenFolderBtn" Click="OpenFolderBtn_Click"/>
+        <TextBox Text="1" Height="26" Margin="0,341,11,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="False" x:Name="StartNumberTxt" HorizontalAlignment="Right" Width="84"/>
+        <Label Content="시작번호" HorizontalAlignment="Left" Height="26" Margin="231,341,0,0" VerticalAlignment="Top" Width="57"/>
+        <CheckBox x:Name="AddAllStartChx" Content="전체+시작" HorizontalAlignment="Right" Margin="0,0,65,13" VerticalAlignment="Bottom" Width="92" Height="25"/>
 
     </Grid>
 </Window>
